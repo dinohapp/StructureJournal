@@ -4,7 +4,7 @@ I'm attempting to move my paper-based bullet journal system to digital form and 
 Intended for everyday use and experimenting with different languages.
 General idea is pretty simple: 
 Weekly agenda planner with goals for the week and each day, as well as big goals for the next 1,3 and 5+ years.
-`
+```
 5+ years
  |- my life purpose in two sentences
  |- motivational quotes / custom field / free thougts
@@ -36,7 +36,7 @@ Weekly agenda planner with goals for the week and each day, as well as big goals
              |- goals
              |- summary/journal
              |- link to the month habit tracking
-`
+```
 Month Habit Tracking:
 Each day of the month would have a checkmark and a list of things that would need to be completed. I think Loop Habit Tracker (https://github.com/iSoron/uhabits) does a great job at it. Might just have a link to the app somehow or utilize the web version when it becomes available.
    
