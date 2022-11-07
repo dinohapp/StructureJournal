@@ -54,6 +54,10 @@ Each day of the month would have a checkmark and a list of things that would nee
 - defined the basic structure of the database with SQL statements
 - tried to include test for the app.js but can't quite grasp the concept of TDD yet. Will write unit tests after I have better concept o the code structure.
 
+2022-11-07
+- Moved the database creation logic to ./db.js. 
+- There should be a better way to run queries than .exec(). Need to research that.
+
 # Contributing
 Feel free to contribute to this project or reach out to me with any suggestions.
 
