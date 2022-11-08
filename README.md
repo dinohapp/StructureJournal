@@ -18,10 +18,10 @@ Weekly agenda planner with goals for the week and each day, as well as big goals
      |- year summary
      |- 6 months / birthday review
      |- easter list of 10 (every easter write 10 achievable goals for the year)
-     |_Quarter 1-4
+     |_Season 1-4
        |- goals
        |- summary
-       |- view of the goals for each month of the quarter
+       |- view of the goals for each month of the season
        |_Month 1-12
          |- month habits (loop habits)
          |- big goals (1y, 3y, 5+y)
@@ -57,6 +57,13 @@ Each day of the month would have a checkmark and a list of things that would nee
 2022-11-07
 - Moved the database creation logic to ./db.js. 
 - There should be a better way to run queries than .exec(). Need to research that.
+- Created timeHandler.js to create the specific date object.
+- Realized that what I need is not actually quarters of the year but the seasons, renamed the database accordingly.
+- Attempted to go with native JS Date methods (doesn't have weeks) or sqlite's strfitme(), looks like all I have to do is to derive the season from the month.
+
+2022-11-08
+- Decided to go with Date.toISOString().slice(0, 10) instead of the native .getMonth, .getDate methods
+
 
 # Contributing
 Feel free to contribute to this project or reach out to me with any suggestions.

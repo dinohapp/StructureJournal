@@ -4,9 +4,9 @@ const db = new Database("db.sqlite", { readwrite: true, create:true });
 let initializeDB = () => {
     if (!fs.existsSync("db.sqlite")) { //if the database file does not exist, initialize the database
         db.exec(
-            "CREATE TABLE years (year INTEGER PRIMARY KEY NOT NULL, goals TEXT, summary TEXT, easter10 TEXT, halfway_review TEXT);");
+            "CREATE TABLE years (year TEXT PRIMARY KEY NOT NULL, goals TEXT, summary TEXT, easter10 TEXT, halfway_review TEXT);");
         db.exec(
-            "CREATE TABLE quarters (quarter TEXT PRIMARY KEY NOT NULL, goals TEXT, summary TEXT);");
+            "CREATE TABLE seasons (season TEXT PRIMARY KEY NOT NULL, goals TEXT, summary TEXT);");
         db.exec(
             "CREATE TABLE months (month TEXT PRIMARY KEY NOT NULL, goals TEXT, summary TEXT);");
         db.exec(
