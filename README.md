@@ -63,7 +63,7 @@ Each day of the month would have a checkmark and a list of things that would nee
 
 2022-11-08
 - Decided to go with Date.toISOString().slice(0, 10) instead of the native .getMonth, .getDate methods
-
+- Fixed a bug: db.sqlite was created in the parent folder and another db.js was being created in the ./bun/ folder.
 
 # Contributing
 Feel free to contribute to this project or reach out to me with any suggestions.
