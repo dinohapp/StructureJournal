@@ -65,6 +65,15 @@ Each day of the month would have a checkmark and a list of things that would nee
 - Decided to go with Date.toISOString().slice(0, 10) instead of the native .getMonth, .getDate methods
 - Fixed a bug: db.sqlite was created in the parent folder and another db.js was being created in the ./bun/ folder.
 - fs.existsSync() checks if the file is there and the db = new Database creates the empty file. Decided to remove the fs.existsSync() and add IF NOT EXISTS constraint to each table query (I think that's a better design anyway.)
+
+2022-12-13
+- Finally have time to work on the project. The next logical thing is to be able to add entries to the database.
+- First, query the database for an existing year. If it does not exist, create with all the fields empty. Do the same process for season, month, week and day. All fields are derived from timeHandler.js -> formatDate(). 
+
+2022-12-15
+- Thinking through the MVP of the app. User interface does not matter at this point, just need to be able to add entries to the database and be able to view them. CRU(D).
+
+
 # Contributing
 Feel free to contribute to this project or reach out to me with any suggestions.
 
