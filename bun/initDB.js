@@ -1,3 +1,4 @@
+//This file is used to initialize the database and create the initial tables.
 import { Database } from "bun:sqlite";
 const fs = require('fs');
 const db = new Database("./bun/db.sqlite", { readwrite: true, create:true });

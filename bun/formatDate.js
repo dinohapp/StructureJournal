@@ -1,4 +1,4 @@
-import { db } from './db';
+import { db } from './initDB';
 //TODO
 /*format the date to following format for each table to be used as PK
 years: YYYY

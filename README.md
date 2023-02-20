@@ -32,6 +32,7 @@ Weekly agenda planner with goals for the week and each day, as well as big goals
            |- goals
            |- summary
            |- direction/plan/steps
+           |- big goal
            |- project
            |_Day Mon..Sun
              |- goals
@@ -40,7 +41,13 @@ Weekly agenda planner with goals for the week and each day, as well as big goals
 ```
 Month Habit Tracking:
 Each day of the month would have a checkmark and a list of things that would need to be completed. I think Loop Habit Tracker (https://github.com/iSoron/uhabits) does a great job at it. Might just have a link to the app somehow or utilize the web version when it becomes available.
-   
+
+# Installation
+No installation required yet.
+
+# Running
+bunjs ./bun/app.js
+
 ## Notes:
 ### Progress so far:
 2022-11-03
@@ -73,6 +80,11 @@ Each day of the month would have a checkmark and a list of things that would nee
 2022-12-15
 - Thinking through the MVP of the app. User interface does not matter at this point, just need to be able to add entries to the database and be able to view them. CRU(D).
 
+2023-02-18
+ - Back at the project. At the moment, just getting to understand where I left off. Even forgot how to run the project. Need to add it to the documentation.
+ - Renamed the function names for better clarity of their function.
+ - Deciding how to handle each of the etnries: year, season, month, week, day. At the moment will have all of them take $type, goals and summary as parameters. For simplicity.
+ - Next step: figure out how to best pass the date and the fields for each date and implement the logic for creating a new entry, if there is none; or updating it, if there is one.
 
 # Contributing
 Feel free to contribute to this project or reach out to me with any suggestions.
