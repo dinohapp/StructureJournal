@@ -10,8 +10,8 @@ let initializeDB = () => {
     db.exec(
         "CREATE TABLE IF NOT EXISTS months (month TEXT PRIMARY KEY NOT NULL, goals TEXT, summary TEXT);");
     db.exec(
-        "CREATE TABLE IF NOT EXISTS weeks (week TEXT PRIMARY KEY NOT NULL, goals TEXT, summary TEXT, direction_plan_steps TEXT, project TEXT);");
+        "CREATE TABLE IF NOT EXISTS weeks (week TEXT PRIMARY KEY NOT NULL, goals TEXT, summary TEXT, direction_plan_steps TEXT, big_goal TEXT, project TEXT);");
     db.exec(
-        "CREATE TABLE IF NOT EXISTS days (day TEXT PRIMARY KEY NOT NULL, goals TEXT, recap TEXT);");
+        "CREATE TABLE IF NOT EXISTS days (day TEXT PRIMARY KEY NOT NULL, goals TEXT, summary TEXT);");
 };
 export { db, initializeDB };
