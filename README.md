@@ -86,6 +86,8 @@ bunjs ./bun/app.js
  - Deciding how to handle each of the etnries: year, season, month, week, day. At the moment will have all of them take $type, goals and summary as parameters. For simplicity.
  - Next step: figure out how to best pass the date and the fields for each date and implement the logic for creating a new entry, if there is none; or updating it, if there is one.
 
+2023-02-20
+ - Trying to figure out the best way to manage the data and maintain the schema of each entry. So far the code is very redundant. I'm hoping to have the working model and then remove redundancy.
 # Contributing
 Feel free to contribute to this project or reach out to me with any suggestions.
 

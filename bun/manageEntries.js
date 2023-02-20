@@ -76,6 +76,7 @@ import { db } from './initDB';
         }
 */
 
+//try to get the entry from the database and create it if it does not exist
 let getEntry = (date) => {
     let dateObj = {};
     if(db.query(`SELECT * FROM years WHERE year = '${date.year}'`).get() === null) {
