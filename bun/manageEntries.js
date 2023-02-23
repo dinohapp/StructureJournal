@@ -40,40 +40,6 @@ import { db } from './initDB';
         summary: "",
     },
 }
-
-    let dateSchema =
-        {
-            year: {
-                year: date.year,
-                goals: "",
-                summary: "",
-                easter10: "",
-                halfway_review: "",
-            },
-            season: {
-                season: date.season,
-                goals: "",
-                summary: "",
-            },
-            month: {
-                month: date.month,
-                goals: "",
-                summary: "",
-            },
-            week: {
-                week: date.week,
-                goals:"",
-                summary:"",
-                direction_plan_steps:"",
-                big_goal:"",
-                project:"",
-            },
-            day: {
-                day: date.day,
-                goals: "",
-                summary: "",
-            },
-        }
 */
 
 //try to get the entry from the database and create it if it does not exist
@@ -130,19 +96,26 @@ let getEntry = (date) => {
         }
 
     dateObj.day = db.query(`SELECT * FROM days WHERE day = '${date.day}'`).get();
+
     return dateObj;
 }
 
-let manageEntries = (date) => {
-    //check if database has any entries for the now.year
-    //if not, create one
-    //TODO: rewrite the database access with async/await
-    if(db.query(`SELECT * FROM years WHERE year = ${date.year}`).get() === null) {
-//        createEntry(date);
-    } else {
-//        updateEntry(date);
-    }
+let updateEntry = (date, data) => {
+    db.exec(`UPDATE months SET 
+        month = ${date.month},
+        goals = ${data.month.goals},
+        summary = ${data.month.summary}
+        `)
 };
+
+
+// let updateEntry = (date, data) => {
+//     db.exec("UPDATE months VALUES SET ($month, $goals, $summary)", {
+//         $month: date.month,
+//         $goals: data.month.goals,
+//         $summary: data.month.summary,
+//         })
+// };
 
 
 // let updateEntry = (date) => {
@@ -159,4 +132,4 @@ let deleteEntry = (date) => {
     //db.exec("INSERT INTO years VALUES ($year, $goals, $summary, $easter10, $halfway_review)"    
 }
 
-export { manageEntries, getEntry };
+export { getEntry, updateEntry };

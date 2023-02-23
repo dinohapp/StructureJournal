@@ -31,9 +31,12 @@ let getSeason = (month) => {
 let formattedDate = {};
 //decided against using JS native .getMonth/Date/Year since it adds unnecessary complexity and using Date.toISOString with slice() is more readable
 let formatDate = (date) => {
+    //adjusting for the timezone offset
+    date = new Date(date.getTime() - date.getTimezoneOffset()*60000);
     formattedDate.year = date.toISOString().slice(0, 4);
     formattedDate.month = date.toISOString().slice(0, 7);
     formattedDate.day = date.toISOString().slice(0, 10);
+    console.log(date.toDateString());
     formattedDate.week = `${formattedDate.year}-W${
         Number(
             db.query(

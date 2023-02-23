@@ -88,8 +88,13 @@ bunjs ./bun/app.js
 
 2023-02-20
  - Trying to figure out the best way to manage the data and maintain the schema of each entry. So far the code is very redundant. I'm hoping to have the working model and then remove redundancy.
+
+2023-02-22
+ - Found that the formatDate is returning the next day instead of current day. Adjusted for the timezone offset with date.getTime() - date.getTimezoneOffset()*60000)
+ - Had to stop working, next time continue on updateEntry function.
+
 # Contributing
-Feel free to contribute to this project or reach out to me with any suggestions.
+Feel free to contribute to this project or reach out with any suggestions.
 
 # License
 GNU GPLv3
