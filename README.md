@@ -93,6 +93,10 @@ bunjs ./bun/app.js
  - Found that the formatDate is returning the next day instead of current day. Adjusted for the timezone offset with date.getTime() - date.getTimezoneOffset()*60000)
  - Had to stop working, next time continue on updateEntry function.
 
+ 2023-02-24
+ - Found that it's possible to use INSERT or REPLACE in sqlite, attempting to implement that https://stackoverflow.com/questions/3634984/insert-if-not-exists-else-update
+ - the INSERT OR REPLACE solution worked great. Replacing all the code to represent the same model.
+
 # Contributing
 Feel free to contribute to this project or reach out with any suggestions.
 

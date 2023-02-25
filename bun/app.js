@@ -4,9 +4,11 @@ import { db, initializeDB } from './initDB';
 import { formatDate } from './formatDate';
 import {getEntry, updateEntry } from './manageEntries';
 initializeDB();
-now = formatDate(new Date(now));
+let tod = new Date();
+let tom = new Date();
+tom = tom.setDate(tod.getDate()+1)
+now = formatDate(new Date(tom));
 console.log(`CURRENT DATA:`);
-console.log(getEntry(now));
 let date = now; //for testing purposes
 let entryChanges = {
     year: {
@@ -40,5 +42,6 @@ let entryChanges = {
         summary: "",
     },
 }
-updateEntry(now, entryChanges)
+console.log(getEntry(now, entryChanges));
+//updateEntry(now, entryChanges)
 db.close();
