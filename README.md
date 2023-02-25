@@ -96,6 +96,10 @@ bunjs ./bun/app.js
  2023-02-24
  - Found that it's possible to use INSERT or REPLACE in sqlite, attempting to implement that https://stackoverflow.com/questions/3634984/insert-if-not-exists-else-update
  - the INSERT OR REPLACE solution worked great. Replacing all the code to represent the same model.
+ - separated the getEntry from updateEntry logic.
+ - added deletion logic, only for the day. Deleting a week or a month might be implemented later.
+  
+ - TODO: add frontend
 
 # Contributing
 Feel free to contribute to this project or reach out with any suggestions.
