@@ -1,4 +1,4 @@
-
+import { Serve } from "bun";
 let now = Date.now();
 import { db, initializeDB } from './initDB';
 import { formatDate } from './formatDate';
@@ -47,3 +47,9 @@ let entryChanges = {
 console.log(getEntry(now, entryChanges));
 //updateEntry(now, entryChanges)
 db.close();
+
+export default {
+    fetch(req) {
+      return new Response(Bun.file("./bun/index.html"))
+    }
+}

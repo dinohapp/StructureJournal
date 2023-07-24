@@ -93,13 +93,19 @@ bunjs ./bun/app.js
  - Found that the formatDate is returning the next day instead of current day. Adjusted for the timezone offset with date.getTime() - date.getTimezoneOffset()*60000)
  - Had to stop working, next time continue on updateEntry function.
 
- 2023-02-24
+2023-02-24
  - Found that it's possible to use INSERT or REPLACE in sqlite, attempting to implement that https://stackoverflow.com/questions/3634984/insert-if-not-exists-else-update
  - the INSERT OR REPLACE solution worked great. Replacing all the code to represent the same model.
  - separated the getEntry from updateEntry logic.
  - added deletion logic, only for the day. Deleting a week or a month might be implemented later.
-  
- - TODO: add frontend
+
+2023-07-24
+ - Back to the project.
+ - Tried anytype.io - took a lot of inspiration from it but still not the functionality that I seek.
+ - Do I use WEB page as frontend or CLI?
+ - Trying to set it up as CLI first.
+ - Added bun server to serve index.html on localhost:3000
+ 
 
 # Contributing
 Feel free to contribute to this project or reach out with any suggestions.
